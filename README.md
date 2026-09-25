@@ -1,5 +1,7 @@
 # digital_qubit
 
+![digital_qubit](docs/banner.svg)
+
 [![tests](https://github.com/akosidave31/digital-qubit/actions/workflows/tests.yml/badge.svg)](https://github.com/akosidave31/digital-qubit/actions/workflows/tests.yml)
 
 A small, readable quantum computer simulator in pure NumPy, plus neural models that learn a
@@ -23,6 +25,12 @@ system with exact ground truth.
     print(c.to_text())
     print(c.state().probs())                           # [0.5, 0, 0, 0.5]
     print(c.noisy(20, T1=50, T_phi=40).probs())        # after waiting with noise
+
+![Entanglement sudden death](docs/sudden_death.png)
+
+*A Bell pair under realistic noise: the pair's entanglement reaches exactly zero at t ≈ 21, while a
+single qubit's coherence only fades gradually. Bell-inequality violation disappears even earlier.
+Reproduce it with [`examples/02_noise_and_sudden_death.py`](examples/02_noise_and_sudden_death.py).*
 
 More in [`examples/`](examples): Bell pair and CHSH, entanglement sudden death,
 learning a hidden qubit, 5-qubit GHZ state.
